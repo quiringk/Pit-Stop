@@ -21,7 +21,7 @@ namespace PitStop.iPhone
 	public partial class AppDelegate : UIApplicationDelegate
 	{
 		// class-level declarations
-		const string MapsApiKey = "AIzaSyDLxe7qwAPQkbngjNM-i5GRDRTbT4_xCR4";
+		const string MapsApiKey = "";
 		
 		public override UIWindow Window {
 			get;
@@ -53,9 +53,6 @@ namespace PitStop.iPhone
 
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
-//			MapServices.ProvideAPIKey (MapsApiKey);
-//			return true;
-
 			Forms.Init();
 
 			UIWindow window = new UIWindow(UIScreen.MainScreen.Bounds);

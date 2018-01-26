@@ -111,9 +111,6 @@ namespace PitStop
 			};
 			Task.WaitAll (allPlaces);
 
-//			List<Place> allPlaces = new List<Place> ();
-//			allPlaces = searchPlacesFromPoints (pointsToSearch, 1, placeType);
-
 			List<Place> placesToSearch = new List<Place>();
 			for(int x = 0; x < allPlaces.Length; x++)
 			{
@@ -133,23 +130,23 @@ namespace PitStop
 
 			TimeSpan duration = DateTime.Now - timeStarted;
 
-//			Logger.info ("Results", "Searching for: " + placeType);
-//			Logger.info ("Results", "Search Radius: " + searchRadius);
-//			Logger.info ("Results", "Number Of Places Found: " + placesToSearch2.Count);
-//			Logger.info ("Results", "Place Searches Calls: " + numTimesSearchPlacesCalled);
-//			Logger.info ("Results", "Place Details Calls: " + placesToSearch2.Count);
-//			Logger.info ("Results", "Total API Calls: " + (placesToSearch2.Count + numTimesSearchPlacesCalled));
-//			Logger.info ("Results", "Total Time: " + duration.ToString());
 
-//			foreach (Place place in placesToSearch2)
-//			{
-//				Logger.info ("Results", " ");
-//				Logger.info ("Results", place.Name);
-//				Logger.info ("Results", "Open now: " + place.openNow);
-//				Logger.info ("Results", "Open: " + place.openTime);
-//				Logger.info ("Results", "Close: " + place.CloseTime);
-//				Logger.info ("Results", "Coordinates: " + place.Location.latitude + "," + place.Location.longitude);
-//			}
+
+			Logger.info ("Results", "Number Of Places Found: " + placesToSearch2.Count);
+			Logger.info ("Results", "Place Searches Calls: " + numTimesSearchPlacesCalled);
+			Logger.info ("Results", "Place Details Calls: " + placesToSearch2.Count);
+			Logger.info ("Results", "Total API Calls: " + (placesToSearch2.Count + numTimesSearchPlacesCalled));
+			Logger.info ("Results", "Total Time: " + duration.ToString());
+
+			foreach (Place place in placesToSearch2)
+			{
+				Logger.info ("Results", " ");
+				Logger.info ("Results", place.Name);
+				Logger.info ("Results", "Open now: " + place.openNow);
+				Logger.info ("Results", "Open: " + place.openTime);
+				Logger.info ("Results", "Close: " + place.CloseTime);
+				Logger.info ("Results", "Coordinates: " + place.Location.latitude + "," + place.Location.longitude);
+			}
 
 			foreach (Place place in placesToSearch2) {
 				if (place.openNow) {
@@ -181,7 +178,6 @@ namespace PitStop
 		public static GeoPoint getFinalDestination()
 		{
 			GeoPoint geoPoint = new GeoPoint (45.533429, -122.554858);	// BURNSIDE & CESAR
-			//GeoPoint geoPoint = new GeoPoint (45.522883, -122.631745);	// BURNSIDE REALLY CLOSE
 			return geoPoint;
 		}
 
@@ -245,11 +241,6 @@ namespace PitStop
 				numPointsAdded++;
 			}
 
-//			Task<List<Place>> results = searchPlacesFromPoints (points, searchRadius, placeType);
-//			List<Place> allPlaces = results.Result;
-//
-//			return allPlaces;
-
 			Task<List<Place>>[] allPlaces = {
 				Task<List<Place>>.Run(() => searchPlacesFromPoints(pointsArray1, searchRadius, placeType)),
 				Task<List<Place>>.Run(() => searchPlacesFromPoints(pointsArray2, searchRadius, placeType)),
@@ -289,8 +280,7 @@ namespace PitStop
 		{
 			List<Place> placesToAdd = new List<Place>();
 
-			//string url = @"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + coordinates.latitude + "," + coordinates.longitude + "&types=" + searchType + "&rankby=distance&key=AIzaSyB8nbfAMilSdvj_95zfET2WPA5S83VaLiY";
-			string url = @"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + coordinates.latitude + "," + coordinates.longitude + "&keyword=" + searchType + "&rankby=distance&key=AIzaSyB8nbfAMilSdvj_95zfET2WPA5S83VaLiY";
+			string url = @"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + coordinates.latitude + "," + coordinates.longitude + "&keyword=" + searchType + "&rankby=distance&key=";
 			var httpClient = new HttpClient(new NativeMessageHandler());
 			Task<HttpResponseMessage> response = null;
 			response = httpClient.GetAsync(url);
@@ -388,7 +378,7 @@ namespace PitStop
 
 		public static Place getPlaceDetails(string placeId)
 		{
-			string url = @"https://maps.googleapis.com/maps/api/place/details/json?placeid=" + placeId + "&key=AIzaSyB8nbfAMilSdvj_95zfET2WPA5S83VaLiY";
+			string url = @"https://maps.googleapis.com/maps/api/place/details/json?placeid=" + placeId + "&key=";
 			var httpClient = new HttpClient(new NativeMessageHandler());
 			Task<HttpResponseMessage> response = httpClient.GetAsync(url);
 			Task<string> returnedText = response.Result.Content.ReadAsStringAsync ();
@@ -468,7 +458,7 @@ namespace PitStop
 			travelData.steps = new List<Step> ();
 
 			// ORIGIN -> PLACE DATA
-			string url = @"https://maps.googleapis.com/maps/api/directions/json?mode=" + travelMode + "&origin=" + originXY.latitude + "," + originXY.longitude + "&destination=" + destinationXY.latitude + "," + destinationXY.longitude + "&key=AIzaSyB8nbfAMilSdvj_95zfET2WPA5S83VaLiY";
+			string url = @"https://maps.googleapis.com/maps/api/directions/json?mode=" + travelMode + "&origin=" + originXY.latitude + "," + originXY.longitude + "&destination=" + destinationXY.latitude + "," + destinationXY.longitude + "&key=";
 			var httpClient = new HttpClient(new NativeMessageHandler());
 			Task<HttpResponseMessage> response = httpClient.GetAsync(url);
 			Task<string> returnedText = response.Result.Content.ReadAsStringAsync ();
@@ -528,7 +518,7 @@ namespace PitStop
 				+ "&origin=" + originLoc.latitude + "," + originLoc.longitude
 				+ "&destination=" + destinationLoc.latitude + "," + destinationLoc.longitude
 				+ "&waypoints=" + pitStopLoc.latitude + "," + pitStopLoc.longitude
-				+ "&key=AIzaSyB8nbfAMilSdvj_95zfET2WPA5S83VaLiY";
+				+ "&key=";
 			var httpClient = new HttpClient(new NativeMessageHandler());
 			Task<HttpResponseMessage> response = httpClient.GetAsync(url);
 			Task<string> returnedText = response.Result.Content.ReadAsStringAsync ();
