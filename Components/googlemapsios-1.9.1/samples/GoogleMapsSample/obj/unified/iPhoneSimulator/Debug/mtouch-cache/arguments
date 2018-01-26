@@ -1,0 +1,33 @@
+# Version: 8.6.0.51 (dfb682f)
+# [first argument, ignore] # /Users/kevinquiring/Projects/PitStop/Components/googlemapsios-1.9.1/samples/GoogleMapsSample/mtouch.exe
+/Library/Frameworks/Xamarin.iOS.framework/Versions/8.6.0.51/bin/mtouch-64 \
+	--cache \
+	/Users/kevinquiring/Projects/PitStop/Components/googlemapsios-1.9.1/samples/GoogleMapsSample/obj/unified/iPhoneSimulator/Debug/mtouch-cache \
+	--sim \
+	/Users/kevinquiring/Projects/PitStop/Components/googlemapsios-1.9.1/samples/GoogleMapsSample/bin/unified/iPhoneSimulator/Debug/GoogleMapsSample.app \
+	--executable \
+	GoogleMapsSample \
+	--debug \
+	--nolink \
+	--sdkroot \
+	/Applications/Xcode.app/Contents/Developer \
+	--sdk \
+	8.1 \
+	--targetver \
+	6.1 \
+	--abi=i386 \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
+	-r \
+	../../lib//ios-unified/GoogleMaps.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
+	-r \
+	../../lib//ios-unified/GoogleMaps.dll \
+	/Users/kevinquiring/Projects/PitStop/Components/googlemapsios-1.9.1/samples/GoogleMapsSample/bin/unified/iPhoneSimulator/Debug//GoogleMapsSample.exe \

@@ -1,0 +1,13 @@
+/Users/kevinquiring/Projects/PitStop/Android/obj/Debug/MonoAndroid,Version=v4.4.AssemblyAttribute.cs
+/Users/kevinquiring/Projects/PitStop/Android/bin/Debug/Xamarin.Android.Support.v4.dll
+/Users/kevinquiring/Projects/PitStop/Android/bin/Debug/Xamarin.Android.Support.v7.MediaRouter.dll
+/Users/kevinquiring/Projects/PitStop/Android/bin/Debug/Xamarin.Android.Support.v7.AppCompat.dll
+/Users/kevinquiring/Projects/PitStop/Android/bin/Debug/GooglePlayServicesLib.dll
+/Users/kevinquiring/Projects/PitStop/Android/bin/Debug/Xamarin.Forms.Platform.Android.dll
+/Users/kevinquiring/Projects/PitStop/Android/bin/Debug/FormsViewGroup.dll
+/Users/kevinquiring/Projects/PitStop/Android/bin/Debug/Xamarin.Forms.Core.dll
+/Users/kevinquiring/Projects/PitStop/Android/bin/Debug/Xamarin.Forms.Xaml.dll
+/Users/kevinquiring/Projects/PitStop/Android/bin/Debug/Xamarin.Forms.Maps.Android.dll
+/Users/kevinquiring/Projects/PitStop/Android/bin/Debug/Xamarin.Forms.Maps.dll
+/Users/kevinquiring/Projects/PitStop/Android/bin/Debug/PitStop.dll
+/Users/kevinquiring/Projects/PitStop/Android/bin/Debug/PitStop.dll.mdb

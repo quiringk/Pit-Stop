@@ -1,0 +1,49 @@
+﻿<Properties StartupItem="GoogleMapsAdvSample/GoogleMapsAdvSample-Classic.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone4s.8.1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../PitStop.iPhone/PitStop.iPhoneViewController.cs">
+    <Files>
+      <File FileName="../../../../PitStop.iPhone/AppDelegate.cs" Line="30" Column="30" NotebookId="1" />
+      <File FileName="../../../../PitStop.iPhone/PitStop.iPhoneViewController.cs" Line="4" Column="4" NotebookId="1" />
+      <File FileName="../../../../PitStop.iPhone/Info.plist" NotebookId="1" />
+      <File FileName="GoogleMapsAdvSample/AppDelegate.cs" Line="9" Column="9" NotebookId="1" />
+      <File FileName="GoogleMapsAdvSample/DVCMenu.cs" Line="9" Column="9" NotebookId="1" />
+      <File FileName="GoogleMapsAdvSample/Info.plist" NotebookId="1" />
+      <File FileName="../../../../PitStop.iPhone/Main.cs" Line="4" Column="4" NotebookId="1" />
+      <File FileName="../GoogleMapsSample/MapViewController.cs" Line="5" Column="5" NotebookId="1" />
+      <File FileName="../GoogleMapsSample/AppDelegate.cs" Line="16" Column="16" NotebookId="1" />
+      <File FileName="../GoogleMapsSample/Main.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="../GoogleMapsSample/Info.plist" NotebookId="1" />
+      <File FileName="../../../../Android/GetLocation.cs" Line="36" Column="36" NotebookId="1" />
+      <File FileName="../../../../Android/HttpClientHelper.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="../../../../Android/AndroidLogger.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="../../../../Android/packages.config" Line="7" Column="7" NotebookId="1" />
+    </Files>
+    <FloatingWindows>
+      <FloatingWindow WindowId="1" X="0" Y="22" Width="720" Height="795">
+        <Files>
+          <File FileName="../../../../Android/MainActivity.cs" Line="22" Column="22" />
+        </Files>
+      </FloatingWindow>
+    </FloatingWindows>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/kevinquiring/Projects/PitStop/PitStop/Algorithm.cs" line="637" column="1" />
+      <Breakpoint file="/Users/kevinquiring/Projects/PitStop/PitStop/Algorithm.cs" line="639" column="1" />
+      <Breakpoint file="/Users/kevinquiring/Projects/PitStop/PitStop/Algorithm.cs" line="640" column="1" />
+      <Breakpoint file="/Users/kevinquiring/Projects/PitStop/PitStop/Algorithm.cs" line="643" column="1" />
+      <Breakpoint file="/Users/kevinquiring/Projects/PitStop/Android/MainActivity.cs" line="122" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../../PitStop/Algorithm.cs" line="65" offsetX="375" offsetY="840" expression="response" liveUpdate="False" />
+    <Watch file="../../../../PitStop/Algorithm.cs" line="69" offsetX="568" offsetY="952" expression="Newtonsoft.Json.JsonConvert" liveUpdate="False" />
+    <Watch file="../../../../PitStop/Algorithm.cs" line="69" offsetX="568" offsetY="952" expression="json" liveUpdate="False" />
+    <Watch file="../../../../PitStop/Algorithm.cs" line="24" offsetX="795" offsetY="322" expression="originalRoute" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+</Properties>
